@@ -1,0 +1,15 @@
+{
+  "name": "sf-toolkit-website",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "lwr build"
+  },
+  "dependencies": {
+    "@lwc/rollup-plugin": "^8.12.1",
+    "@salesforce-ux/design-system": "^2.25.6"
+  },
+  "devDependencies": {
+    "@lwc/compiler": "^8.12.1",
+    "lwc": "^8.12.1"
+  }
+}
