@@ -43,12 +43,15 @@
     },
     "ui/app": {
       "version": "1.0.0",
-      "path": "/1/bundle/esm/l/en-US/bi/0/module/mi/ui/app/v/1_0_0/s/8d7309b798dac7f7f7ed2add55f7ea32711d22ab/bundle_ui_app.js",
+      "path": "/1/bundle/esm/l/en-US/bi/0/module/mi/ui/app/v/1_0_0/s/ae284abd1affecf9e93469b49f8d33107f8cd168/bundle_ui_app.js",
       "includedModules": [],
       "imports": [
-        "lwc/v/6_5_0"
+        "lwc/v/6_5_0",
+        "lwr/esmLoader/v/0_12_4"
       ],
-      "dynamicImports": []
+      "dynamicImports": [
+        "recipe/hello/v/1_0_0"
+      ]
     }
   }
 }

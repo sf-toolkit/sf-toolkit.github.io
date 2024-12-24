@@ -12,6 +12,25 @@ import _recipeHelloExpressionsTrack from "recipe/helloExpressionsTrack";
 import _recipeHelloConditionalRendering from "recipe/helloConditionalRendering";
 import _recipeHelloForEach from "recipe/helloForEach";
 import _recipeHelloIterator from "recipe/helloIterator";
+import _recipeCompositionBasics from "recipe/compositionBasics";
+import _recipeCompositionIteration from "recipe/compositionIteration";
+import _recipeCompositionContactSearch from "recipe/compositionContactSearch";
+import _recipeCompositionDynamic from "recipe/compositionDynamic";
+import _recipeEventSimple from "recipe/eventSimple";
+import _recipeEventWithData from "recipe/eventWithData";
+import _recipeEventBubbling from "recipe/eventBubbling";
+import _recipeApiProperty from "recipe/apiProperty";
+import _recipeApiFunction from "recipe/apiFunction";
+import _recipeApiSetterGetter from "recipe/apiSetterGetter";
+import _recipeApiSpread from "recipe/apiSpread";
+import _recipeMiscSharedJavaScript from "recipe/miscSharedJavaScript";
+import _recipeMiscRestApiCall from "recipe/miscRestApiCall";
+import _recipeMiscDomQuery from "recipe/miscDomQuery";
+import _recipeMiscMultipleTemplates from "recipe/miscMultipleTemplates";
+import _recipeLibsD3 from "recipe/libsD3";
+import _recipeLibsChartjs from "recipe/libsChartjs";
+import _recipeLightDomQuery from "recipe/lightDomQuery";
+import _recipeLightDomStyles from "recipe/lightDomStyles";
 import _uiNavfooter from "ui/navfooter";
 import {parseFragment, registerTemplate} from "lwc";
 const $fragment1 = parseFragment`<div${3}>Title</div>`;
@@ -53,6 +72,63 @@ const stc8 = {
 const stc9 = {
   key: 13
 };
+const stc10 = {
+  key: 14
+};
+const stc11 = {
+  key: 15
+};
+const stc12 = {
+  key: 16
+};
+const stc13 = {
+  key: 17
+};
+const stc14 = {
+  key: 18
+};
+const stc15 = {
+  key: 19
+};
+const stc16 = {
+  key: 20
+};
+const stc17 = {
+  key: 21
+};
+const stc18 = {
+  key: 22
+};
+const stc19 = {
+  key: 23
+};
+const stc20 = {
+  key: 24
+};
+const stc21 = {
+  key: 25
+};
+const stc22 = {
+  key: 26
+};
+const stc23 = {
+  key: 27
+};
+const stc24 = {
+  key: 28
+};
+const stc25 = {
+  key: 29
+};
+const stc26 = {
+  key: 30
+};
+const stc27 = {
+  key: 31
+};
+const stc28 = {
+  key: 32
+};
 function tmpl($api, $cmp, $slotset, $ctx) {
   const {st: api_static_fragment, b: api_bind, c: api_custom_element, fr: api_fragment, h: api_element} = $api;
   const {_m0, _m1, _m2} = $ctx;
@@ -65,12 +141,12 @@ function tmpl($api, $cmp, $slotset, $ctx) {
     on: {
       "categorychange": _m0 || ($ctx._m0 = api_bind($cmp.handleCategoryChange))
     }
-  }), api_element("article", stc1, [api_element("div", stc2, [$cmp.navigationItems.hello.visible ? api_fragment(6, [api_custom_element("recipe-hello", _recipeHello, stc3), api_custom_element("recipe-hello-binding", _recipeHelloBinding, stc4), api_custom_element("recipe-hello-expressions", _recipeHelloExpressions, stc5), api_custom_element("recipe-hello-expressions-track", _recipeHelloExpressionsTrack, stc6), api_custom_element("recipe-hello-conditional-rendering", _recipeHelloConditionalRendering, stc7), api_custom_element("recipe-hello-for-each", _recipeHelloForEach, stc8), api_custom_element("recipe-hello-iterator", _recipeHelloIterator, stc9)], 0) : null, api_custom_element("ui-navfooter", _uiNavfooter, {
+  }), api_element("article", stc1, [api_element("div", stc2, [$cmp.navigationItems.hello.visible ? api_fragment(6, [api_custom_element("recipe-hello", _recipeHello, stc3), api_custom_element("recipe-hello-binding", _recipeHelloBinding, stc4), api_custom_element("recipe-hello-expressions", _recipeHelloExpressions, stc5), api_custom_element("recipe-hello-expressions-track", _recipeHelloExpressionsTrack, stc6), api_custom_element("recipe-hello-conditional-rendering", _recipeHelloConditionalRendering, stc7), api_custom_element("recipe-hello-for-each", _recipeHelloForEach, stc8), api_custom_element("recipe-hello-iterator", _recipeHelloIterator, stc9)], 0) : $cmp.navigationItems.composition.visible ? api_fragment(6, [api_custom_element("recipe-composition-basics", _recipeCompositionBasics, stc10), api_custom_element("recipe-composition-iteration", _recipeCompositionIteration, stc11), api_custom_element("recipe-composition-contact-search", _recipeCompositionContactSearch, stc12), api_custom_element("recipe-composition-dynamic", _recipeCompositionDynamic, stc13)], 0) : $cmp.navigationItems.child.visible ? api_fragment(6, [api_custom_element("recipe-event-simple", _recipeEventSimple, stc14), api_custom_element("recipe-event-with-data", _recipeEventWithData, stc15), api_custom_element("recipe-event-bubbling", _recipeEventBubbling, stc16)], 0) : $cmp.navigationItems.parent.visible ? api_fragment(6, [api_custom_element("recipe-api-property", _recipeApiProperty, stc17), api_custom_element("recipe-api-function", _recipeApiFunction, stc18), api_custom_element("recipe-api-setter-getter", _recipeApiSetterGetter, stc19), api_custom_element("recipe-api-spread", _recipeApiSpread, stc20)], 0) : $cmp.navigationItems.misc.visible ? api_fragment(6, [api_custom_element("recipe-misc-shared-java-script", _recipeMiscSharedJavaScript, stc21), api_custom_element("recipe-misc-rest-api-call", _recipeMiscRestApiCall, stc22), api_custom_element("recipe-misc-dom-query", _recipeMiscDomQuery, stc23), api_custom_element("recipe-misc-multiple-templates", _recipeMiscMultipleTemplates, stc24)], 0) : $cmp.navigationItems.party.visible ? api_fragment(6, [api_custom_element("recipe-libs-d3", _recipeLibsD3, stc25), api_custom_element("recipe-libs-chartjs", _recipeLibsChartjs, stc26)], 0) : $cmp.navigationItems.lightDom.visible ? api_fragment(6, [api_custom_element("recipe-light-dom-query", _recipeLightDomQuery, stc27), api_custom_element("recipe-light-dom-styles", _recipeLightDomStyles, stc28)], 0) : null, api_custom_element("ui-navfooter", _uiNavfooter, {
     props: {
       "labelNext": $cmp.nextNavigationItem,
       "labelPrevious": $cmp.previousNavigationItem
     },
-    key: 14,
+    key: 33,
     on: {
       "nextclicked": _m1 || ($ctx._m1 = api_bind($cmp.handleNavigateNext)),
       "previousclicked": _m2 || ($ctx._m2 = api_bind($cmp.handleNavigatePrevious))
