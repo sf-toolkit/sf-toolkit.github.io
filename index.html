@@ -1,81 +1,166 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SF Toolkit Website</title>
+    <link rel="stylesheet" href="https://unpkg.com/@salesforce-ux/design-system/assets/styles/salesforce-lightning-design-system.min.css">
+    <style>
+        /* Custom styles for horizontal navigation */
+        .slds-global-header__nav {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+        .slds-global-header__nav-item {
+            flex: 1;
+            text-align: center;
+        }
+        .slds-welcome-mat__info {
+            background-color: #eef4ff
+        }
+        /* Add margin to the main content to prevent overlap */
+        main {
+            margin-top: 20px; /* Adjust this value as needed for spacing */
+        }
+        #home {
+         /*   background-image: url('/public/assets/images/welcome-mat/bg-info@2x.png');
+            background-size: cover;
+            background-position: center;
+            min-height: 400px; *//* Adjust as needed for visibility */
+           /* display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;*/ /* Text color for contrast with the background image */
+        }
+        
+        /* Ensure text is readable over the image */
+      /*  #home .slds-box {
+            background-color: rgba(0, 0, 0, 0.5);*/ /* Semi-transparent background for text readability */
+           /* padding: 20px;
+            border-radius: 4px;
+        }*/
+    </style>
+</head>
+<body>
+    <!-- Header with Horizontal Navigation -->
+    <header class="slds-global-header_container">
+        <div class="slds-global-header slds-grid slds-wrap slds-grid_align-center slds-p-horizontal_medium slds-p-vertical_small">
+            <nav class="slds-global-header__item slds-size_1-of-1">
+                <ul class="slds-global-header__nav">
+                    <li class="slds-global-header__nav-item"><a href="#home" class="slds-global-header__nav-link">Home</a></li>
+                    <li class="slds-global-header__nav-item"><a href="#getting-started" class="slds-global-header__nav-link">Getting Started</a></li>
+                    <li class="slds-global-header__nav-item"><a href="#features" class="slds-global-header__nav-link">Features</a></li>
+                    <li class="slds-global-header__nav-item"><a href="#faq" class="slds-global-header__nav-link">FAQ</a></li>
+                    <li class="slds-global-header__nav-item"><a href="#about" class="slds-global-header__nav-link">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content with added margin-top -->
+    <main class="slds-grid slds-wrap slds-grid_align-center slds-p-around_medium">
+        <!-- Hero Section (Home) -->
+        <section id="home" class="slds-col slds-size_1-of-1 slds-p-around_medium">
+           <!-- <div class="slds-box slds-theme_shade slds-text-align_center">
+                <h2 class="slds-text-heading_large">Welcome to Our Site</h2>
+                <p class="slds-text-body_regular">Discover the beauty of simplicity with our Lightning Design System themed website.</p>
+                <button class="slds-button slds-button_brand">Learn More</button>
+            </div>-->
+
+            <div class="slds-welcome-mat__info slds-size_1-of-1" tabindex="0" role="region">
+                <div class="slds-welcome-mat__info-content">
+                    <h2 class="slds-welcome-mat__info-title">SF Toolkit</h2>
+                    <div class="slds-welcome-mat__info-description slds-text-longform">
+                        <p>Welcome to the SF Toolkit that provide multiple tools to help you monitor your orgs, analyse the permissions &amp; profiles, etc</p>
+                    </div>
+                    <div class="slds-welcome-mat__info-progress">
+                        <p><strong>Built with LWC and LWR</strong></p>
+                        <p>(Web, Chrome Extension and Electron)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Getting Started Section -->
+        <section id="getting-started" class="slds-col slds-size_1-of-1 slds-p-around_medium">
+            <h2 class="slds-text-heading_medium slds-text-align_center">Getting Started</h2>
+            <div class="slds-box slds-theme_default slds-text-align_center">
+                <p class="slds-text-body_regular">Here's how you can get started with our services or products. Follow these steps:</p>
+                <!-- Add your getting started content here -->
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="slds-col slds-size_1-of-1 slds-p-around_medium">
+            <h2 class="slds-text-heading_medium slds-text-align_center">Our Features</h2>
+            <div class="slds-grid slds-wrap slds-grid_pull-padded-medium">
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3 slds-p-horizontal_medium slds-p-vertical_small">
+                    <div class="slds-box slds-theme_default">
+                        <h3 class="slds-text-heading_small">Feature 1</h3>
+                        <p class="slds-text-body_small">Description of feature 1 with some details.</p>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3 slds-p-horizontal_medium slds-p-vertical_small">
+                    <div class="slds-box slds-theme_default">
+                        <h3 class="slds-text-heading_small">Feature 2</h3>
+                        <p class="slds-text-body_small">Description of feature 2 with some details.</p>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3 slds-p-horizontal_medium slds-p-vertical_small">
+                    <div class="slds-box slds-theme_default">
+                        <h3 class="slds-text-heading_small">Feature 3</h3>
+                        <p class="slds-text-body_small">Description of feature 3 with some details.</p>
+                    </div>
+                </div>
+            </div>
+        </section>        
+
+        <!-- FAQ Section -->
+        <section id="faq" class="slds-col slds-size_1-of-1 slds-p-around_medium">
+            <h2 class="slds-text-heading_medium slds-text-align_center">FAQ</h2>
+            <div class="slds-grid slds-wrap slds-grid_pull-padded-medium">
+                <!-- FAQ items -->
+                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_medium slds-p-vertical_small">
+                    <div class="slds-box slds-theme_default">
+                        <h3 class="slds-text-heading_small">Question 1</h3>
+                        <p class="slds-text-body_small">Answer to question 1.</p>
+                    </div>
+                </div>
+                <!-- Add more FAQ items as needed -->
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="slds-col slds-size_1-of-1 slds-p-around_medium">
+            <h2 class="slds-text-heading_medium slds-text-align_center">About Us</h2>
+            <div class="slds-box slds-theme_default slds-text-align_center">
+                <p class="slds-text-body_regular">We are a team passionate about creating user-friendly and efficient solutions using modern technologies.</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="slds-grid slds-grid_align-center slds-p-around_large slds-theme_shade">
+            <div class="slds-col slds-size_1-of-1 slds-text-align_center">
+                <p class="slds-text-body_small">© 2024 SF Toolkit Website. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>
+<!--
+        <div id="main"><ui-app></ui-app></div>
+        <script type="application/javascript" src="/1/application/esm/l/en-US/ai/home/configuration/ci/-%2F-/s/fa884a0552c794fff73faa126cb94732/config.js"></script>
+<script type="module" src="/1/bundle/esm/l/en-US/bi/0/module/mi/%40lwrjs%2Fapp-service%2Fhome%2Fmodule%2Fesm%2Fv%2F0_12_4/s/9636e7de7e55681168b44eac7249e8d91a431796/bundle_@lwrjs_app-service_home_module_esm.js"></script>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Lightning Web Components Recipes</title>
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
-
-        <link rel="stylesheet" href="/1/asset/immutable/s/17349088189946458/assets/css/main.css" />
-        <link rel="stylesheet" href="/1/asset/immutable/s/17349088189947758/assets/css/normalize.css" />
-
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=UA-45076517-19"
-        ></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag('js', new Date());
-
-            gtag('config', 'UA-45076517-19', { page_path: '/#hello' });
-        </script>
-
-        <meta charset="utf-8" />
-        <meta name="author" content="Salesforce Developer Evangelism" />
-        <meta name="description" content="Lightning Web Components Recipes" />
-        <meta name="apple-mobile-web-app-title" content="LWC Recipes" />
-        <link rel="manifest" href="/1/asset/immutable/s/17349088190005474/assets/site.webmanifest" />
-        <meta
-            name="application-name"
-            content="Lightning Web Components Recipes"
-        />
-        <meta name="msapplication-TileColor" content="#2d89ef" />
-        <meta name="theme-color" content="#ffffff" />
-
-        <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/1/asset/immutable/s/17349088189951962/assets/images/apple-touch-icon.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="/1/asset/immutable/s/17349088189989550/assets/images/favicon-32x32.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="/1/asset/immutable/s/17349088189988780/assets/images/favicon-16x16.png"
-        />
-        <link
-            rel="mask-icon"
-            href="/1/asset/immutable/s/17349088190001738/assets/images/safari-pinned-tab.svg"
-            color="#5bbad5"
-        />
-        <link rel="shortcut icon" href="/1/asset/immutable/s/17349088189990410/assets/images/favicon.ico" />
-        <link rel="icon" href="/1/asset/immutable/s/17349088189991274/assets/images/logo.svg" />
-
-        <!-- Import styles and script from a CDN to use Shoelace web components -->
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.4.0/dist/themes/light.css"
-        />
-        <script
-            type="module"
-            src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.4.0/dist/shoelace.js"
-        ></script>
+        <link rel="stylesheet" href="https://unpkg.com/@salesforce-ux/design-system/assets/styles/salesforce-lightning-design-system.min.css">
     </head>
     <body>
         <main class="wrapper">
             <div id="main"><ui-app></ui-app></div>
         </main>
-        <script type="application/javascript" src="/1/application/esm/l/en-US/ai/home/configuration/ci/-%2F-/s/73eaadb8fe16872c0e391de2b9e1c2de/config.js"></script>
-<script type="module" src="/1/bundle/esm/l/en-US/bi/0/module/mi/%40lwrjs%2Fapp-service%2Fhome%2Fmodule%2Fesm%2Fv%2F0_12_4/s/b9c0289d7239c96b2b408a6649096681bccc5c6b/bundle_@lwrjs_app-service_home_module_esm.js"></script>
-<link rel="modulepreload" href="/1/bundle/esm/l/en-US/bi/0/module/mi/ui%2Fapp%2Fv%2F1_0_0/s/ae284abd1affecf9e93469b49f8d33107f8cd168/bundle_ui_app.js" />
+        __LWR_RESOURCES__1735722466631
     </body>
-</html>
+</html>-->

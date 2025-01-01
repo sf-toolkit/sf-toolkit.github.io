@@ -1,57 +1,36 @@
 {
   "bundles": {
-    "recipe/hello": {
-      "version": "1.0.0",
-      "path": "/1/bundle/esm/l/en-US/bi/0/module/mi/recipe/hello/v/1_0_0/s/39608e4dd881a04e727dea6e4f3b25095ed17fd2/bundle_recipe_hello.js",
-      "includedModules": [],
-      "imports": [
-        "lwc/v/6_5_0"
-      ],
-      "dynamicImports": []
-    },
     "@lwrjs/app-service/home/module/esm": {
       "version": "0.12.4",
-      "path": "/1/bundle/esm/l/en-US/bi/0/module/mi/@lwrjs/app-service/home/module/esm/v/0_12_4/s/b9c0289d7239c96b2b408a6649096681bccc5c6b/bundle_@lwrjs_app-service_home_module_esm.js",
+      "path": "/1/bundle/esm/l/en-US/bi/0/module/mi/@lwrjs/app-service/home/module/esm/v/0_12_4/s/9636e7de7e55681168b44eac7249e8d91a431796/bundle_@lwrjs_app-service_home_module_esm.js",
       "includedModules": [],
       "imports": [
         "lwr/esmLoader/v/0_12_4",
         "lwr/profiler/v/0_12_4",
-        "lwc/v/6_5_0"
+        "lwc/v/6_7_2"
       ],
-      "dynamicImports": []
-    },
-    "lwc": {
-      "version": "6.5.0",
-      "path": "/1/bundle/esm/l/en-US/bi/0/module/mi/lwc/v/6_5_0/s/69029b0d57be26dc66576684350f0bf0b6d67c43/bundle_lwc.js",
-      "includedModules": [],
-      "imports": [],
       "dynamicImports": []
     },
     "lwr/esmLoader": {
       "version": "0.12.4",
-      "path": "/1/bundle/esm/l/en-US/bi/0/module/mi/lwr/esmLoader/v/0_12_4/s/3b5afc0110f08969b7938442b065de2774d468c5/bundle_lwr_esmLoader.js",
+      "path": "/1/bundle/esm/l/en-US/bi/0/module/mi/lwr/esmLoader/v/0_12_4/s/d3ad651b193c0e1bc1110d4bfe8aff5ebba61319/bundle_lwr_esmLoader.js",
       "includedModules": [],
       "imports": [],
       "dynamicImports": []
     },
     "lwr/profiler": {
       "version": "0.12.4",
-      "path": "/1/bundle/esm/l/en-US/bi/0/module/mi/lwr/profiler/v/0_12_4/s/991ae32d5bc35ce6af7b0e8b2799ddcf8d42046c/bundle_lwr_profiler.js",
+      "path": "/1/bundle/esm/l/en-US/bi/0/module/mi/lwr/profiler/v/0_12_4/s/06ff804822ab3301680592b617a7ab1c293c935e/bundle_lwr_profiler.js",
       "includedModules": [],
       "imports": [],
       "dynamicImports": []
     },
-    "ui/app": {
-      "version": "1.0.0",
-      "path": "/1/bundle/esm/l/en-US/bi/0/module/mi/ui/app/v/1_0_0/s/ae284abd1affecf9e93469b49f8d33107f8cd168/bundle_ui_app.js",
+    "lwc": {
+      "version": "6.7.2",
+      "path": "/1/bundle/esm/l/en-US/bi/0/module/mi/lwc/v/6_7_2/s/848ad6e4253046096003887c9801945c95138aee/bundle_lwc.js",
       "includedModules": [],
-      "imports": [
-        "lwc/v/6_5_0",
-        "lwr/esmLoader/v/0_12_4"
-      ],
-      "dynamicImports": [
-        "recipe/hello/v/1_0_0"
-      ]
+      "imports": [],
+      "dynamicImports": []
     }
   }
 }

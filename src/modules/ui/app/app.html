@@ -1,65 +1,90 @@
 <template>
-    <div>Title</div>
-    <section class="content container page-background">
-        <ui-navbar
-            nav-items={navigationItems}
-            selected-item={currentNavigationItem}
-            oncategorychange={handleCategoryChange}
-        >
-        </ui-navbar>
-        <article class="container">
-            <div>
-                <template lwc:if={navigationItems.hello.visible}>
-                    <recipe-hello></recipe-hello>
-                    <recipe-hello-binding></recipe-hello-binding>
-                    <recipe-hello-expressions></recipe-hello-expressions>
-                    <recipe-hello-expressions-track></recipe-hello-expressions-track>
-                    <recipe-hello-conditional-rendering></recipe-hello-conditional-rendering>
-                    <recipe-hello-for-each></recipe-hello-for-each
-                    ><recipe-hello-iterator></recipe-hello-iterator>
-                </template>
-              <template lwc:elseif={navigationItems.composition.visible}>
-                    <recipe-composition-basics></recipe-composition-basics>
-                    <recipe-composition-iteration></recipe-composition-iteration>
-                    <recipe-composition-contact-search></recipe-composition-contact-search>
-                    <recipe-composition-dynamic></recipe-composition-dynamic>
-                </template>
-                <template lwc:elseif={navigationItems.child.visible}>
-                    <recipe-event-simple></recipe-event-simple>
-                    <recipe-event-with-data></recipe-event-with-data>
-                    <recipe-event-bubbling></recipe-event-bubbling>
-                </template>
-                <template lwc:elseif={navigationItems.parent.visible}>
-                    <recipe-api-property></recipe-api-property>
-                    <recipe-api-function></recipe-api-function>
-                    <recipe-api-setter-getter></recipe-api-setter-getter>
-                    <recipe-api-spread></recipe-api-spread>
-                </template>
-                <template lwc:elseif={navigationItems.misc.visible}>
-                    <recipe-misc-shared-java-script></recipe-misc-shared-java-script>
-                    <recipe-misc-rest-api-call></recipe-misc-rest-api-call>
-                    <recipe-misc-dom-query></recipe-misc-dom-query>
-                    <recipe-misc-multiple-templates></recipe-misc-multiple-templates>
-                </template>
-                <template lwc:elseif={navigationItems.party.visible}>
-                    <recipe-libs-d3></recipe-libs-d3>
-                    <recipe-libs-chartjs></recipe-libs-chartjs>
-                </template>
-                <template lwc:elseif={navigationItems.lightDom.visible}>
-                    <recipe-light-dom-query></recipe-light-dom-query>
-                    <recipe-light-dom-styles></recipe-light-dom-styles>
-                </template>
-             <!--     <template lwc:elseif={navigationItems.externalWc.visible}>
-                    <recipe-external-component-cdn></recipe-external-component-cdn>
-                    <recipe-external-component-npm></recipe-external-component-npm>
-                </template>-->
-                <ui-navfooter
-                    label-next={nextNavigationItem}
-                    label-previous={previousNavigationItem}
-                    onnextclicked={handleNavigateNext}
-                    onpreviousclicked={handleNavigatePrevious}
-                ></ui-navfooter>
+    <div class="slds-grid slds-grid--align-center slds-p-around_medium">
+        <div class="slds-col slds-size_1-of-2 slds-medium-size_1-of-3">
+            <!-- Left Side - Introduction -->
+            <div class="slds-box slds-box_x-small slds-theme_shade">
+                <h1 class="slds-text-heading_large slds-text-align_center">SF Toolkit</h1>
+                <p class="slds-text-body_regular slds-text-align_center slds-p-vertical_small">
+                    Welcome to the SF Toolkit that provide multiple tools to help you monitor your orgs, analyse the permissions & profiles, etc
+                </p>
+                <p class="slds-text-body_regular slds-text-align_center">
+                    <strong>Built with LWC and LWR</strong><br/>
+                    (Web, Chrome Extension and Electron)
+                </p>
+                <img src="path/to/your/image.jpg" alt="SF Toolkit Landscape" class="slds-image slds-size_full" />
             </div>
-        </article>
+        </div>
+        <div class="slds-col slds-size_1-of-2 slds-medium-size_2-of-3">
+            <!-- Right Side - Actions -->
+            <template for:each={actions} for:item="action">
+                <div key={action.title} class="slds-p-vertical_medium">
+                    <div class="slds-box slds-box_x-small slds-theme_default">
+                        <div class="slds-media slds-media_center">
+                            <div class="slds-media__figure">
+                                <span class="slds-icon_container slds-icon-standard-{action.icon}" title="Description of icon when needed">
+                                    <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                        <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#{action.icon}"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="slds-media__body">
+                                <h3 class="slds-text-heading_small">{action.title}</h3>
+                                <p class="slds-text-body_small">{action.description}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+
+    
+    <section class="slds-grid slds-grid_align-center slds-p-vertical_medium">
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_2-of-3">
+            <div class="slds-card">
+                <div class="slds-card__header slds-grid">
+                    <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                        <div class="slds-media__figure">
+                            <span class="slds-icon_container slds-icon-standard-instruction" title="Instructions">
+                                <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                    <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#instruction"></use>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="slds-media__body">
+                            <h2 class="slds-card__header-title">
+                                <a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="App Instructions">
+                                    <span>App Instructions</span>
+                                </a>
+                            </h2>
+                        </div>
+                    </header>
+                </div>
+                <div class="slds-card__body slds-card__body_inner">
+                    <template for:each={steps} for:item="step">
+                        <div key={step.title} class="slds-p-vertical_small">
+                            <h3 class="slds-text-heading_small">{step.title}</h3>
+                            <p class="slds-text-body_regular">{step.content}</p>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
     </section>
+
+    <div class="slds-grid slds-wrap">
+        <template for:each={features} for:item="feature">
+            <div key={feature.id} class="slds-col slds-size_1-of-3 slds-p-around_medium">
+                <div class="slds-card">
+                    <div class="slds-card__header slds-grid">
+                        <h2 class="slds-text-heading_small slds-truncate">{feature.title}</h2>
+                    </div>
+                    <div class="slds-card__body slds-card__body_inner">
+                        <img src={feature.image} alt={feature.title} class="slds-card__image" />
+                        <p class="slds-text-body_small slds-p-top_small">{feature.description}</p>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </div>
 </template>

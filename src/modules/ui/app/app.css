@@ -1,4 +1,7 @@
-:host {
+main {
+    margin-top: 50px;
+}
+/*:host {
     display: block;
     overflow: hidden;
     position: relative;
@@ -22,7 +25,7 @@ article.container {
     }
 }
 
-/* TODO re-evaluate 
+ TODO re-evaluate 
 .page-background {
     background-image: linear-gradient(to bottom, transparent, #fafafa),
         url('resources/images/background.png');

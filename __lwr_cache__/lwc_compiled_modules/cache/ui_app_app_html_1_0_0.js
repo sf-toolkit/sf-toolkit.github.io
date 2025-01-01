@@ -1,169 +1,95 @@
-import { freezeTemplate } from "lwc";
-
 import _implicitStylesheets from "./app.css";
-
 import _implicitScopedStylesheets from "./app.scoped.css?scoped=true";
-
-import _uiNavbar from "ui/navbar";
-import _recipeHello from "recipe/hello";
-import _recipeHelloBinding from "recipe/helloBinding";
-import _recipeHelloExpressions from "recipe/helloExpressions";
-import _recipeHelloExpressionsTrack from "recipe/helloExpressionsTrack";
-import _recipeHelloConditionalRendering from "recipe/helloConditionalRendering";
-import _recipeHelloForEach from "recipe/helloForEach";
-import _recipeHelloIterator from "recipe/helloIterator";
-import _recipeCompositionBasics from "recipe/compositionBasics";
-import _recipeCompositionIteration from "recipe/compositionIteration";
-import _recipeCompositionContactSearch from "recipe/compositionContactSearch";
-import _recipeCompositionDynamic from "recipe/compositionDynamic";
-import _recipeEventSimple from "recipe/eventSimple";
-import _recipeEventWithData from "recipe/eventWithData";
-import _recipeEventBubbling from "recipe/eventBubbling";
-import _recipeApiProperty from "recipe/apiProperty";
-import _recipeApiFunction from "recipe/apiFunction";
-import _recipeApiSetterGetter from "recipe/apiSetterGetter";
-import _recipeApiSpread from "recipe/apiSpread";
-import _recipeMiscSharedJavaScript from "recipe/miscSharedJavaScript";
-import _recipeMiscRestApiCall from "recipe/miscRestApiCall";
-import _recipeMiscDomQuery from "recipe/miscDomQuery";
-import _recipeMiscMultipleTemplates from "recipe/miscMultipleTemplates";
-import _recipeLibsD3 from "recipe/libsD3";
-import _recipeLibsChartjs from "recipe/libsChartjs";
-import _recipeLightDomQuery from "recipe/lightDomQuery";
-import _recipeLightDomStyles from "recipe/lightDomStyles";
-import _uiNavfooter from "ui/navfooter";
-import {parseFragment, registerTemplate} from "lwc";
-const $fragment1 = parseFragment`<div${3}>Title</div>`;
+import {freezeTemplate, parseFragment, registerTemplate, sanitizeAttribute} from "lwc";
+const $fragment1 = parseFragment`<div class="slds-col slds-size_1-of-2 slds-medium-size_1-of-3${0}"${2}><div class="slds-box slds-box_x-small slds-theme_shade${0}"${2}><h1 class="slds-text-heading_large slds-text-align_center${0}"${2}>SF Toolkit</h1><p class="slds-text-body_regular slds-text-align_center slds-p-vertical_small${0}"${2}>Welcome to the SF Toolkit that provide multiple tools to help you monitor your orgs, analyse the permissions &amp; profiles, etc</p><p class="slds-text-body_regular slds-text-align_center${0}"${2}><strong${3}>Built with LWC and LWR</strong><br${3}>(Web, Chrome Extension and Electron)</p><img src="path/to/your/image.jpg" alt="SF Toolkit Landscape" class="slds-image slds-size_full${0}"${2}></div></div>`;
+const $fragment2 = parseFragment`<div class="slds-p-vertical_medium${0}"${2}><div class="slds-box slds-box_x-small slds-theme_default${0}"${2}><div class="slds-media slds-media_center${0}"${2}><div class="slds-media__figure${0}"${2}><span class="slds-icon_container slds-icon-standard-{action.icon}${0}" title="Description of icon when needed"${2}><svg class="slds-icon slds-icon_small${0}" aria-hidden="true"${2}><use${"a6:xlink:href"}${3}/></svg></span></div><div class="slds-media__body${0}"${2}><h3 class="slds-text-heading_small${0}"${2}>${"t9"}</h3><p class="slds-text-body_small${0}"${2}>${"t11"}</p></div></div></div></div>`;
+const $fragment3 = parseFragment`<div class="slds-card__header slds-grid${0}"${2}><header class="slds-media slds-media_center slds-has-flexi-truncate${0}"${2}><div class="slds-media__figure${0}"${2}><span class="slds-icon_container slds-icon-standard-instruction${0}" title="Instructions"${2}><svg class="slds-icon slds-icon_small${0}" aria-hidden="true"${2}><use${"a5:xlink:href"}${3}/></svg></span></div><div class="slds-media__body${0}"${2}><h2 class="slds-card__header-title${0}"${2}><a href="javascript:void(0);" class="slds-card__header-link slds-truncate${0}" title="App Instructions"${2}><span${3}>App Instructions</span></a></h2></div></header></div>`;
+const $fragment4 = parseFragment`<div class="slds-p-vertical_small${0}"${2}><h3 class="slds-text-heading_small${0}"${2}>${"t2"}</h3><p class="slds-text-body_regular${0}"${2}>${"t4"}</p></div>`;
+const $fragment5 = parseFragment`<div class="slds-col slds-size_1-of-3 slds-p-around_medium${0}"${2}><div class="slds-card${0}"${2}><div class="slds-card__header slds-grid${0}"${2}><h2 class="slds-text-heading_small slds-truncate${0}"${2}>${"t4"}</h2></div><div class="slds-card__body slds-card__body_inner${0}"${2}><img${"a6:src"}${"a6:alt"} class="slds-card__image${0}"${2}><p class="slds-text-body_small slds-p-top_small${0}"${2}>${"t8"}</p></div></div></div>`;
 const stc0 = {
   classMap: {
-    "content": true,
-    "container": true,
-    "page-background": true
+    "slds-grid": true,
+    "slds-grid--align-center": true,
+    "slds-p-around_medium": true
   },
-  key: 2
+  key: 0
 };
 const stc1 = {
   classMap: {
-    "container": true
+    "slds-col": true,
+    "slds-size_1-of-2": true,
+    "slds-medium-size_2-of-3": true
   },
-  key: 4
+  key: 3
 };
 const stc2 = {
-  key: 5
+  classMap: {
+    "slds-grid": true,
+    "slds-grid_align-center": true,
+    "slds-p-vertical_medium": true
+  },
+  key: 6
 };
 const stc3 = {
+  classMap: {
+    "slds-col": true,
+    "slds-size_1-of-1": true,
+    "slds-medium-size_2-of-3": true
+  },
   key: 7
 };
 const stc4 = {
+  classMap: {
+    "slds-card": true
+  },
   key: 8
 };
 const stc5 = {
-  key: 9
-};
-const stc6 = {
-  key: 10
-};
-const stc7 = {
+  classMap: {
+    "slds-card__body": true,
+    "slds-card__body_inner": true
+  },
   key: 11
 };
-const stc8 = {
-  key: 12
-};
-const stc9 = {
-  key: 13
-};
-const stc10 = {
+const stc6 = {
+  classMap: {
+    "slds-grid": true,
+    "slds-wrap": true
+  },
   key: 14
 };
-const stc11 = {
-  key: 15
-};
-const stc12 = {
-  key: 16
-};
-const stc13 = {
-  key: 17
-};
-const stc14 = {
-  key: 18
-};
-const stc15 = {
-  key: 19
-};
-const stc16 = {
-  key: 20
-};
-const stc17 = {
-  key: 21
-};
-const stc18 = {
-  key: 22
-};
-const stc19 = {
-  key: 23
-};
-const stc20 = {
-  key: 24
-};
-const stc21 = {
-  key: 25
-};
-const stc22 = {
-  key: 26
-};
-const stc23 = {
-  key: 27
-};
-const stc24 = {
-  key: 28
-};
-const stc25 = {
-  key: 29
-};
-const stc26 = {
-  key: 30
-};
-const stc27 = {
-  key: 31
-};
-const stc28 = {
-  key: 32
-};
 function tmpl($api, $cmp, $slotset, $ctx) {
-  const {st: api_static_fragment, b: api_bind, c: api_custom_element, fr: api_fragment, h: api_element} = $api;
-  const {_m0, _m1, _m2} = $ctx;
-  return [api_static_fragment($fragment1, 1), api_element("section", stc0, [api_custom_element("ui-navbar", _uiNavbar, {
-    props: {
-      "navItems": $cmp.navigationItems,
-      "selectedItem": $cmp.currentNavigationItem
-    },
-    key: 3,
-    on: {
-      "categorychange": _m0 || ($ctx._m0 = api_bind($cmp.handleCategoryChange))
+  const {st: api_static_fragment, k: api_key, d: api_dynamic_text, sp: api_static_part, i: api_iterator, f: api_flatten, h: api_element} = $api;
+  return [api_element("div", stc0, [api_static_fragment($fragment1, 2), api_element("div", stc1, api_flatten([api_iterator($cmp.actions, function (action) {
+    return api_static_fragment($fragment2, api_key(5, action.title), [api_static_part(6, {
+      attrs: {
+        "xlink:href": sanitizeAttribute("use", "http://www.w3.org/2000/svg", "xlink:href", "/assets/icons/standard-sprite/svg/symbols.svg#{action.icon}")
+      }
+    }, null), api_static_part(9, null, api_dynamic_text(action.title)), api_static_part(11, null, api_dynamic_text(action.description))]);
+  })]))]), api_element("section", stc2, [api_element("div", stc3, [api_element("div", stc4, [api_static_fragment($fragment3, 10, [api_static_part(5, {
+    attrs: {
+      "xlink:href": sanitizeAttribute("use", "http://www.w3.org/2000/svg", "xlink:href", "/assets/icons/standard-sprite/svg/symbols.svg#instruction")
     }
-  }), api_element("article", stc1, [api_element("div", stc2, [$cmp.navigationItems.hello.visible ? api_fragment(6, [api_custom_element("recipe-hello", _recipeHello, stc3), api_custom_element("recipe-hello-binding", _recipeHelloBinding, stc4), api_custom_element("recipe-hello-expressions", _recipeHelloExpressions, stc5), api_custom_element("recipe-hello-expressions-track", _recipeHelloExpressionsTrack, stc6), api_custom_element("recipe-hello-conditional-rendering", _recipeHelloConditionalRendering, stc7), api_custom_element("recipe-hello-for-each", _recipeHelloForEach, stc8), api_custom_element("recipe-hello-iterator", _recipeHelloIterator, stc9)], 0) : $cmp.navigationItems.composition.visible ? api_fragment(6, [api_custom_element("recipe-composition-basics", _recipeCompositionBasics, stc10), api_custom_element("recipe-composition-iteration", _recipeCompositionIteration, stc11), api_custom_element("recipe-composition-contact-search", _recipeCompositionContactSearch, stc12), api_custom_element("recipe-composition-dynamic", _recipeCompositionDynamic, stc13)], 0) : $cmp.navigationItems.child.visible ? api_fragment(6, [api_custom_element("recipe-event-simple", _recipeEventSimple, stc14), api_custom_element("recipe-event-with-data", _recipeEventWithData, stc15), api_custom_element("recipe-event-bubbling", _recipeEventBubbling, stc16)], 0) : $cmp.navigationItems.parent.visible ? api_fragment(6, [api_custom_element("recipe-api-property", _recipeApiProperty, stc17), api_custom_element("recipe-api-function", _recipeApiFunction, stc18), api_custom_element("recipe-api-setter-getter", _recipeApiSetterGetter, stc19), api_custom_element("recipe-api-spread", _recipeApiSpread, stc20)], 0) : $cmp.navigationItems.misc.visible ? api_fragment(6, [api_custom_element("recipe-misc-shared-java-script", _recipeMiscSharedJavaScript, stc21), api_custom_element("recipe-misc-rest-api-call", _recipeMiscRestApiCall, stc22), api_custom_element("recipe-misc-dom-query", _recipeMiscDomQuery, stc23), api_custom_element("recipe-misc-multiple-templates", _recipeMiscMultipleTemplates, stc24)], 0) : $cmp.navigationItems.party.visible ? api_fragment(6, [api_custom_element("recipe-libs-d3", _recipeLibsD3, stc25), api_custom_element("recipe-libs-chartjs", _recipeLibsChartjs, stc26)], 0) : $cmp.navigationItems.lightDom.visible ? api_fragment(6, [api_custom_element("recipe-light-dom-query", _recipeLightDomQuery, stc27), api_custom_element("recipe-light-dom-styles", _recipeLightDomStyles, stc28)], 0) : null, api_custom_element("ui-navfooter", _uiNavfooter, {
-    props: {
-      "labelNext": $cmp.nextNavigationItem,
-      "labelPrevious": $cmp.previousNavigationItem
-    },
-    key: 33,
-    on: {
-      "nextclicked": _m1 || ($ctx._m1 = api_bind($cmp.handleNavigateNext)),
-      "previousclicked": _m2 || ($ctx._m2 = api_bind($cmp.handleNavigatePrevious))
-    }
-  })])])])];
-  /*LWC compiler v6.5.0*/
+  }, null)]), api_element("div", stc5, api_iterator($cmp.steps, function (step) {
+    return api_static_fragment($fragment4, api_key(13, step.title), [api_static_part(2, null, api_dynamic_text(step.title)), api_static_part(4, null, api_dynamic_text(step.content))]);
+  }))])])]), api_element("div", stc6, api_iterator($cmp.features, function (feature) {
+    return api_static_fragment($fragment5, api_key(16, feature.id), [api_static_part(4, null, api_dynamic_text(feature.title)), api_static_part(6, {
+      attrs: {
+        "src": feature.image,
+        "alt": feature.title
+      }
+    }, null), api_static_part(8, null, api_dynamic_text(feature.description))]);
+  }))];
+  /*LWC compiler v8.12.2*/
 }
 export default registerTemplate(tmpl);
 tmpl.stylesheets = [];
-
-
+tmpl.stylesheetToken = "lwc-1uh17g0ai6h";
+tmpl.legacyStylesheetToken = "ui-app_app";
 if (_implicitStylesheets) {
   tmpl.stylesheets.push.apply(tmpl.stylesheets, _implicitStylesheets);
 }
 if (_implicitScopedStylesheets) {
   tmpl.stylesheets.push.apply(tmpl.stylesheets, _implicitScopedStylesheets);
 }
-tmpl.stylesheetToken = "lwc-1uh17g0ai6h";
-tmpl.legacyStylesheetToken = "ui-app_app";
 freezeTemplate(tmpl);

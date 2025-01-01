@@ -1,9 +1,30 @@
-import { LightningElement } from 'lwc';
-import { navigationItems, navigationElements } from './navigation';
+import { LightningElement, api } from 'lwc';
 
 export default class App extends LightningElement {
-    currentNavigationItem = 'hello';
-    navigationItems = navigationItems;
+    get actions() {
+        return [
+            { title: 'Open the app', description: 'Access Analysis, Org monitoring, etc', icon: 'utility:open' },
+            { title: 'CTA - Personal Notes', description: 'Read key notes related to the CTA Board', icon: 'utility:note' },
+            { title: 'Install the Desktop App', description: 'Direct connect the SF Toolkit with your SFDX/SF CLI', icon: 'utility:download' },
+            { title: 'Go to the repo (Github)', description: 'Any contribution is more than welcome.', icon: 'utility:info' }
+        ];
+    }
+    
+    @api features = [
+        { id: 1, title: 'Animated Loop', description: 'GIFs loop automatically for continuous viewing.', image: 'https://cdn.textstudio.com/asset/text-animation-example.gif?20231026' },
+        { id: 2, title: 'Color Palette', description: 'Supports a limited but vibrant color palette.', image: 'https://aquatransform.ch/wp-content/uploads/2017/12/sample-gif-image.gif' },
+        { id: 3, title: 'Low File Size', description: 'Optimized for web with smaller file sizes.', image: 'https://www.aoaophoto.com/Sample/imgs/animation.gif' }
+    ];
+    get steps() {
+        return [
+            { title: 'Step 1: Login', content: 'Enter your email and password to access your account.' },
+            { title: 'Step 2: Navigate', content: 'Use the sidebar to navigate through different sections of the app.' },
+            { title: 'Step 3: Start a Project', content: 'Click on "New Project" to begin your work. Fill in the details to create a project.' },
+            { title: 'Step 4: Collaborate', content: 'Invite team members by entering their email addresses in the project settings.' },
+            { title: 'Step 5: Use Features', content: 'Explore features like task management, file sharing, and real-time chat.' }
+        ];
+    }
+  /*  navigationItems = navigationItems;
     nextNavigationItem;
     previousNavigationItem;
 
@@ -131,5 +152,5 @@ export default class App extends LightningElement {
         gtag('config', 'UA-45076517-19', {
             page_path: '#'.concat(newPage)
         });
-    }
+    }*/
 }
